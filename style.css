@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #262626;
+}
+
+.calendar{
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.calendar-head{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(226, 88, 24);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    cursor: pointer;
+}
+
+.calendar-head-btn{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.calendar-head-btn:hover,
+.calendar-head-btn:focus{
+    color: #333;
+}
+
+.calendar-head-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-head-date-month{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.calendar-head-date-year{
+    letter-spacing: 10px;
+}
+
+.calendar-body{
+    background-color: #fff;
+    height: 100%;
+    padding: 20px;
+}
+
+.calendar-body-weekdays,
+.calendar-body-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+
+.calendar-body-days{
+    grid-template-rows: repeat(5, 1fr);
+    height: calc(100% - 150px);
+}
+
+.calendar-body-weekdays div,
+.calendar-body-days div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.calendar-body-days div:hover{
+    background: #eee;
+}
+
+.calendar-body-weekdays{
+    font-weight: 900;
+    color:  rgb(226, 88, 24);
+    margin-bottom:10px;
+    
+}
+
+.calendar-body-days-prev{
+    color: #ccc;
+}
+
+.today{
+    font-weight: bold;
+    color:  rgb(226, 88, 24);
+    border-bottom: 1px solid #ccc;
+}
